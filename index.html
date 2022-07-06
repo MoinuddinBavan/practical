@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Architect Layout</title>
+
+    <!-- CDN LINKS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" rel="stylesheet"/>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" rel="stylesheet"/>
+    <link href="https://site-assets.fontawesome.com/releases/v6.0.0/css/all.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,700;0,900;1,700&display=swap" rel="stylesheet">
+
+    <!-- SCSS -->
+    <link rel="stylesheet" href="assets/css/custom.css">
+
+</head>
+<body>
+    <div class="fancy-menu">
+        <a class="navbar-brand" href="index.html"><img src="assets/images/logo.png" alt="" class="img-fluid"></a>
+        <div class="menu-icon" id="menu-icon" onclick="myFunction()">
+            <div class='menu-linef'></div>
+            <div class='menu-lines'></div>
+        </div>
+        <div class="custom-nav-item" id="custom-nav-item">
+            <ul class="custom-nav-link">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Projects</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </div>
+    </div>
+    <!-- NavBar END -->
+
+
+    <div class="banner">
+        <div class="home-banner owl-carousel">
+            <div class="item">
+                <img src="assets/images/banner-bg.png" alt="">
+                <div class="home-banner-content">
+                    <p>BUILD WITH </br> NEXT GENERATION </br>OF ARCHITECT</p>
+                </div>
+            </div>
+            <div class="item">
+                <img src="assets/images/banner-bg.png" alt="">
+                <div class="home-banner-content">
+                    <p>BUILD WITH </br> NEXT GENERATION </br>OF ARCHITECT</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Banner END -->
+
+    <!-- JS -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <script src="assets/js/custom.js"></script>
+
+
+    <script>
+    $('.owl-carousel').owlCarousel({
+        items:1,
+        loop:true,
+        dots:false,
+        nav:true,
+        navText : ["<i class='fa-solid fa-left-long'></i>","<i class='fa-solid fa-right-long'></i>"],
+    })
+
+    function myFunction() {
+    var element = document.getElementById("custom-nav-item");
+    element.classList.toggle("active");
+
+    var element = document.getElementById("menu-icon");
+    element.classList.toggle("active");
+}
+    </script>
+
+</body>
+</html>
